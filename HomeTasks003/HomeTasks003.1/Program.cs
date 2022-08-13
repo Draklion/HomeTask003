@@ -1,2 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿try
+{
+  Console.WriteLine("Задание 1. Программа, которая принимает на вход координаты точки (X и Y), причем X !=0 и Y!=0 и выдает номер четверти плоскости, в которой находится эта точка.");
+
+  Console.Write("Введите значение X: ");
+  int X = Int32.Parse(Console.ReadLine());
+  Console.Write("Введите значение Y: ");
+  int Y = Int32.Parse(Console.ReadLine());
+
+  Console.WriteLine(X != 0 && Y != 0 ?
+                    (X > 0 && Y > 0 ? "Точка находится в I четверти" :
+                    X < 0 && Y > 0 ? "Точка находится во II четверти" :
+                    X < 0 && Y < 0 ? "Точка находится во III четверти" :
+                                      "Точка находится во IV четверти") : "Точка является центром координат!");
+}
+
+catch
+{
+  Console.WriteLine("Вы ввели некорректное значение.");
+}
